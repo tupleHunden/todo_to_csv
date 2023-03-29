@@ -1,10 +1,3 @@
-//! A command-line application to find and list TODO comments in Rust and Python codebases.
-//!
-//! This application takes a directory path and an output CSV file path as arguments,
-//! then recursively scans the given directory for Rust and Python source files.
-//! It extracts the single-line TODO comments, and saves the results to the specified CSV file.
-//! The output CSV file contains the file path, line number, and the TODO comment text.
-
 use csv::Writer;
 use ignore::WalkBuilder;
 use std::env;

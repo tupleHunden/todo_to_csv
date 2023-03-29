@@ -36,18 +36,6 @@ pub mod utils {
         }
     }
 
-    /// Extracts a single-line TODO comment from the given line of Rust or Python source code.
-    ///
-    /// This function takes a line of source code and a reference to a compiled regular expression
-    /// matching TODO comments in Rust and Python code. If a TODO comment is found,
-    /// the function returns the comment text as a `String` wrapped in `Some`.
-    /// If no TODO comment is found, the function returns `None`.
-    ///
-    /// # Arguments
-    ///
-    /// * `line` - A reference to a string containing the line of source code.
-    /// * `todo_pattern` - A reference to a compiled regular expression that matches
-    ///                    single-line TODO comments in Rust and Python source code.
     pub fn extract_todo_comment(line: &str, todo_pattern: &Regex) -> Option<String> {
         if let Some(captures) = todo_pattern.captures(line) {
             Some(
